@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Registro() {
     return (
-        <div className="LogIn">
+        <div className="registro">
           <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
               <div className="flex space-x-4 justify-center"> 
@@ -11,11 +11,11 @@ export default function Registro() {
                 <Image src="/Icons/temp.png" width={50} height={50} alt="icono temperatura" style={{ filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)' }} />
                 <Image src="/Icons/wind.png" width={50} height={50} alt="icono viento" style={{ filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)' }} />
               </div>
-              <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight">Iniciar Sesion</h2>
+              <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight">Registrar Usuario</h2>
             </div>
     
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-              <form className="space-y-6" action="#" method="POST">
+              <form className="space-y-6" method="POST">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium leading-6">Usuario</label>
                   <div className="mt-2">

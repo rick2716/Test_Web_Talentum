@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function LogIn() {
   return (
-    <div className="LogIn">
+    <div className="logIn">
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <div className="flex space-x-4 justify-center"> 
@@ -15,7 +15,7 @@ export default function LogIn() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" method="POST">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6">Usuario</label>
               <div className="mt-2">
