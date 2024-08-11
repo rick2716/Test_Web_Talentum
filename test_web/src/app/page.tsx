@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function LogIn() {
   return (
@@ -40,7 +41,7 @@ export default function LogIn() {
           </form>
 
           <p className="mt-10 text-center text-sm">
-            <a href="#" className="font-semibold leading-6 hover:underline">Registrarse</a>
+            <Link href="/Registro" className="font-semibold leading-6 hover:underline">Registrarse</Link>
           </p>
         </div>
       </div>
