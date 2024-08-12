@@ -1,12 +1,30 @@
+'use client'
 import Image from "next/image";
 import Link from 'next/link';
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LogIn() {
+  const router = useRouter();
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const userTest = "rick"
+    const passTest = "123"
+    
+    if(user === userTest && password === passTest){
+      router.push("/Home");
+    }
+  };
+
   return (
     <div className="logIn">
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <div className="flex space-x-4 justify-center"> 
+          <div className="flex space-x-4 justify-center">
             <Image src="/Icons/humidity.png" width={50} height={50} alt="icono humedad" style={{ filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)' }} />
             <Image src="/Icons/temp.png" width={50} height={50} alt="icono temperatura" style={{ filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)' }} />
             <Image src="/Icons/wind.png" width={50} height={50} alt="icono viento" style={{ filter: 'invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%)' }} />
@@ -15,11 +33,13 @@ export default function LogIn() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" method="POST">
+          <form className="space-y-6" onSubmit={handleLogin}>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6">Usuario</label>
+              <label htmlFor="user" className="block text-sm font-medium leading-6">Usuario</label>
               <div className="mt-2">
-                <input id="email" name="email" type="email" autoComplete="email" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                <input id="user" name="user" type="text" autoComplete="username" value={user}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setUser(e.target.value)}
+                  required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
             </div>
 
@@ -28,7 +48,9 @@ export default function LogIn() {
                 <label htmlFor="password" className="block text-sm font-medium leading-6">Contraseña</label>
               </div>
               <div className="mt-2">
-                <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                <input id="password" name="password" type="password" autoComplete="current-password" value={password}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+                  required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
             </div>
 
