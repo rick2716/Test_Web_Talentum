@@ -1,35 +1,28 @@
-import Image from "next/image";
-import Link from 'next/link';
+import CityCard from "@/Components/card";
 
 export default function Home() {
     return (
         <div className="home">
-            <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
-
-                <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                    <div className="group relative bg-white">
-                        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                            <Image src="/Backgrounds/Cali.png" alt="Front of men&#039;s Basic Tee in black."
-                                className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                                width={1000}
-                                height={1000} />
-                        </div>
-                        <div className="mt-4 flex justify-between">
-                            <div>
-                                <h3 className="text-sm text-gray-700">
-                                    <a href="#">
-                                        <span aria-hidden="true" className="absolute inset-0"></span>
-                                        Basic Tee
-                                    </a>
-                                </h3>
-                                <p className="mt-1 text-sm text-gray-500">Black</p>
-                            </div>
-                            <p className="text-sm font-medium text-gray-900">$35</p>
+            <div className="px-4 py-5">
+                <form className="space-y-6">
+                    <div>
+                        <label htmlFor="ciudad" className="block text-sm font-medium leading-6">Ciudad</label>
+                        <div className="mt-2">
+                            <input id="ciudad" name="ciudad" type="text" autoComplete="ciudad"
+                                required className="block w-1/2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                         </div>
                     </div>
 
-                    {/* <!-- More products... --> */}
+                    <div>
+                        <button type="submit" className="flex w-1/10 justify-center rounded-md bg-purple-400 bg-opacity-70 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500">
+                            Buscar
+                        </button>
+                    </div>
+                </form>
+                <div className="flex justify-around space-x-10">
+                    <CityCard />
+                    <CityCard />
+                    <CityCard />
                 </div>
             </div>
         </div>
