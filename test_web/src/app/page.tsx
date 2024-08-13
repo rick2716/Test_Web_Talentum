@@ -12,11 +12,17 @@ export default function LogIn() {
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const userTest = "rick"
-    const passTest = "123"
-    
-    if(user === userTest && password === passTest){
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+    const foundUser = users.find((u: { user: string; password: string; }) => 
+      u.user === user && u.password === password
+    );
+
+    if (foundUser) {
+      localStorage.setItem('isAuthenticated', 'true');
       router.push("/Home");
+    } else {
+      alert("Usuario o contraseña incorrectos");
     }
   };
 

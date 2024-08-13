@@ -1,25 +1,55 @@
 {
-	"weather": [
-		{
-			"id": 802,
-			"main": "Clouds"
-		}
-	],
-	"base": "stations",
-	"main": {
-		"temp": 298.15,
-		"temp_min": 298.15,
-		"temp_max": 298.15,
-		"humidity": 73
+	"1": { "weather": [{ "id": 802, "main": "Nubes dispersas" }],
+	  "base": "stations",
+	  "main": { "temp": 25.0, "temp_min": 24.0, "temp_max": 26.0, "humidity": 73 },
+	  "wind": { "speed": 1.5 },
+	  "sys": { "type": 1, "id": 8590, "country": "CO" },
+	  "name": "Cali",
+	  "cod": 200
 	},
-	"wind": {
-		"speed": 1.5
+	"2": {
+	  "weather": [{ "id": 803, "main": "Nublado" }],
+	  "base": "stations",
+	  "main": { "temp": 17.0, "temp_min": 16.0, "temp_max": 18.0, "humidity": 60 },
+	  "wind": { "speed": 2.0 },
+	  "sys": { "type": 1, "id": 8591, "country": "CO" },
+	  "name": "Bogotá",
+	  "cod": 200
 	},
-	"sys": {
-		"type": 1,
-		"id": 8590,
-		"country": "CO"
+	"3": {
+	  "weather": [{ "id": 800, "main": "Cielo despejado" }],
+	  "base": "stations",
+	  "main": { "temp": 22.0, "temp_min": 21.0, "temp_max": 23.0, "humidity": 65 },
+	  "wind": { "speed": 1.8 },
+	  "sys": { "type": 1, "id": 8592, "country": "CO" },
+	  "name": "Medellín",
+	  "cod": 200
 	},
-	"name": "Cali",
-	"cod": 200
+	"4": {
+	  "weather": [{ "id": 801, "main": "Pocas nubes" }],
+	  "base": "stations",
+	  "main": { "temp": 30.0, "temp_min": 29.0, "temp_max": 31.0, "humidity": 80 },
+	  "wind": { "speed": 3.5 },
+	  "sys": { "type": 1, "id": 8593, "country": "CO" },
+	  "name": "Cartagena",
+	  "cod": 200
+	},
+	"5": {
+	  "weather": [{ "id": 502, "main": "Lluvia intensa" }],
+	  "base": "stations",
+	  "main": { "temp": 28.0, "temp_min": 27.0, "temp_max": 29.0, "humidity": 90 },
+	  "wind": { "speed": 4.0 },
+	  "sys": { "type": 1, "id": 8594, "country": "CO" },
+	  "name": "Barranquilla",
+	  "cod": 200
+	},
+	"6": {
+	  "weather": [{ "id": 804, "main": "Nublado total" }],
+	  "base": "stations",
+	  "main": { "temp": 20.0, "temp_min": 19.0, "temp_max": 21.0, "humidity": 70 },
+	  "wind": { "speed": 2.2 },
+	  "sys": { "type": 1, "id": 8595, "country": "CO" },
+	  "name": "Bucaramanga",
+	  "cod": 200
+	}
 }
