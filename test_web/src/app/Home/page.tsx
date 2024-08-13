@@ -82,6 +82,7 @@ export default function Home() {
                             <CityCard
                                 key={index}
                                 nombre={city.name}
+                                clima={city.weather[0].main}
                                 temp={city.main.temp}
                                 humedad={city.main.humidity}
                                 wind={city.wind.speed}
