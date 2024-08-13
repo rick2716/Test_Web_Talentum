@@ -1,6 +1,6 @@
 'use client'
 import CityCard from "../../Components/card";
-import citiesData from "../../../public/weather/weather.json"; // Importa directamente el JSON
+import citiesData from "../Weather/weather.json"; 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 

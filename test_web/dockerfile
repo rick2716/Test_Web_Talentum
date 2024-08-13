@@ -1,0 +1,23 @@
+# Usar una imagen base de Node.js basada en Debian
+FROM node:18-bullseye
+
+# Establecer el directorio de trabajo en el contenedor
+WORKDIR /test_web
+
+# Copiar los archivos de package.json y package-lock.json
+COPY package*.json ./
+
+# Instalar las dependencias
+RUN npm install
+
+# Copiar el resto del código de la aplicación
+COPY . .
+
+# Construir la aplicación Next.js
+RUN npm run build
+
+# Exponer el puerto que Next.js usará
+EXPOSE 3000
+
+# Comando para iniciar la aplicación
+CMD ["npm", "start"]
